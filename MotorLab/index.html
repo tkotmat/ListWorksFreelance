@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Мотор-Лаб — автосервис: диагностика за 40 минут</title>
+        <meta
+            name="description"
+            content="Автосервис Мотор-Лаб: диагностика за 40 минут, прозрачный прайс, гарантия 12 месяцев на работы. Запишитесь онлайн."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@600;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="top">
+            <a class="logo" href="#hero" aria-label="Мотор-Лаб, на главную"
+                >Мотор-Лаб</a
+            >
+            <nav class="nav" aria-label="Основное меню">
+                <a href="#services">Прайс</a>
+                <a href="#guarantee">Гарантии</a>
+                <a href="#promo">Акции</a>
+            </nav>
+            <a class="top__tel" href="tel:+380000000000">+380 (09) 746-47-98</a>
+            <a class="btn btn--sm" href="#booking">Записаться</a>
+        </header>
+
+        <main>
+            <!-- 1. Оффер -->
+            <section class="hero" id="hero">
+                <div class="hero__text">
+                    <h1>
+                        Скажем, что с машиной, за 40 минут и зачтём диагностику
+                        в ремонт
+                    </h1>
+                    <p class="lead">
+                        Компьютерная диагностика за 490 ₴. Если ремонтируетесь у
+                        нас, вся сумма вычитается из счёта. Цену называем до
+                        начала работ.
+                    </p>
+
+                    <form class="quick" data-form novalidate>
+                        <label class="field">
+                            <span>Ваше имя</span>
+                            <input
+                                name="name"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="Например, Андрей"
+                                required
+                            />
+                        </label>
+                        <label class="field">
+                            <span>Телефон</span>
+                            <input
+                                name="phone"
+                                type="tel"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="+380 __ ___ __ __"
+                                required
+                            />
+                        </label>
+                        <button class="btn" type="submit">
+                            Записаться на диагностику
+                        </button>
+                        <p
+                            class="form__status"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                    <p class="note">
+                        Перезвоним за 10 минут в рабочее время. Без спама.
+                    </p>
+                </div>
+
+                <figure
+                    class="gauge"
+                    aria-label="Шкала времени диагностики: 40 минут"
+                >
+                    <svg viewBox="0 0 320 320" role="img" aria-hidden="true">
+                        <path
+                            class="gauge__ticks"
+                            d="M84.4 235.6 A108 108 0 1 1 235.6 235.6"
+                        />
+                        <path
+                            class="gauge__track"
+                            d="M68.1 251.9 A130 130 0 1 1 251.9 251.9"
+                        />
+                        <path
+                            class="gauge__fill"
+                            d="M68.1 251.9 A130 130 0 1 1 251.9 251.9"
+                        />
+                        <g class="gauge__needle">
+                            <path d="M160 160 L156 70 L160 52 L164 70 Z" />
+                        </g>
+                        <circle class="gauge__hub" cx="160" cy="160" r="12" />
+                    </svg>
+                    <figcaption>
+                        <strong>40</strong>
+                        <span>минут до диагноза</span>
+                    </figcaption>
+                </figure>
+
+                <ul class="facts">
+                    <li><b>12 мес.</b> гарантия на работы</li>
+                    <li><b>0 ₴</b> за повторный осмотр</li>
+                    <li><b>Фотоотчёт</b> по каждой неисправности</li>
+                </ul>
+            </section>
+
+            <!-- 2. Услуги и прайс -->
+            <section class="section" id="services">
+                <div class="wrap">
+                    <h2>Прайс без сюрпризов</h2>
+                    <p class="section__lead">
+                        Цены за работу. Запчасти считаем отдельно, итог
+                        согласовываем с вами до начала ремонта.
+                    </p>
+
+                    <div
+                        class="tabs"
+                        role="tablist"
+                        aria-label="Категории услуг"
+                    ></div>
+                    <ul class="price" id="price-list"></ul>
+                </div>
+            </section>
+
+            <!-- 3. Гарантии -->
+            <section class="section section--dark" id="guarantee">
+                <div class="wrap guarantee">
+                    <div class="guarantee__big">
+                        <span class="guarantee__num">12</span>
+                        <span class="guarantee__unit"
+                            >месяцев<br />или 20 000 км</span
+                        >
+                        <p>
+                            Гарантия на все работы. Письменная, в заказ-наряде.
+                        </p>
+                    </div>
+                    <ul class="guarantee__list">
+                        <li>
+                            <h3>Показываем неисправность</h3>
+                            <p>
+                                Фото и видео с подъёмника до начала ремонта. Вы
+                                решаете, что чинить.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Возвращаем старые детали</h3>
+                            <p>
+                                Заменённые запчасти отдаём вам, можно проверить,
+                                что замена была.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Сертифицированные запчасти</h3>
+                            <p>
+                                Оригинал или аналоги проверенных производителей.
+                                Чеки и артикулы в папке с заказом.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Чиним бесплатно, если вернулась поломка</h3>
+                            <p>
+                                Если неисправность повторилась в гарантийный
+                                срок, устраняем за наш счёт.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4. Акции -->
+            <section class="section" id="promo">
+                <div class="wrap">
+                    <h2>Акции этого месяца</h2>
+                    <p class="section__lead">
+                        Действуют до конца месяца. Осталось:
+                        <b id="countdown">&nbsp;</b>
+                    </p>
+
+                    <div class="promos">
+                        <article class="promo promo--main">
+                            <span class="promo__tag">Хит</span>
+                            <h3>Диагностика + замена масла</h3>
+                            <p class="promo__price">
+                                <s>1 340 ₴</s> <b>990 ₴</b>
+                            </p>
+                            <p>
+                                Компьютерная диагностика, масло и масляный
+                                фильтр. Выгода 350 ₴.
+                            </p>
+                            <a
+                                class="btn"
+                                href="#booking"
+                                data-service="Замена масла и фильтра"
+                                >Взять акцию</a
+                            >
+                        </article>
+                        <article class="promo">
+                            <h3>Проверка перед зимой</h3>
+                            <p class="promo__price"><b>390 ₴</b></p>
+                            <p>
+                                АКБ, тормоза, подвеска, охлаждающая жидкость,
+                                свет. Выдаём чек-лист.
+                            </p>
+                            <a
+                                class="btn btn--ghost"
+                                href="#booking"
+                                data-service="Диагностика ходовой на подъёмнике"
+                                >Записаться</a
+                            >
+                        </article>
+                        <article class="promo">
+                            <h3>Приведи друга</h3>
+                            <p class="promo__price"><b>−300 ₴</b></p>
+                            <p>
+                                Вам и другу скидка на следующее обслуживание,
+                                когда он приедет по вашей рекомендации.
+                            </p>
+                            <a class="btn btn--ghost" href="#booking"
+                                >Узнать условия</a
+                            >
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Запись -->
+            <section class="section section--signal" id="booking">
+                <div class="wrap booking">
+                    <div class="booking__text">
+                        <h2>Запишитесь на удобное время</h2>
+                        <p>
+                            Оставьте заявку, мастер перезвонит за 10 минут и
+                            подтвердит время. Окна на ближайшие дни разбирают
+                            быстро.
+                        </p>
+                        <ul class="contacts">
+                            <li><b>Пн–Сб</b> 09:00–20:00, Вс 10:00–17:00</li>
+                            <li><b>Адрес</b> укажите ваш адрес</li>
+                            <li>
+                                <b>Телефон</b>
+                                <a href="tel:+380000000000"
+                                    >+380 (67) 482-19-36</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="card" id="book-form" data-form novalidate>
+                        <label class="field">
+                            <span>Имя</span>
+                            <input
+                                name="name"
+                                type="text"
+                                autocomplete="name"
+                                required
+                            />
+                        </label>
+                        <label class="field">
+                            <span>Телефон</span>
+                            <input
+                                name="phone"
+                                type="tel"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="+380 __ ___ __ __"
+                                required
+                            />
+                        </label>
+                        <label class="field">
+                            <span>Услуга</span>
+                            <select name="service" id="service-select"></select>
+                        </label>
+                        <label class="field">
+                            <span>Желаемая дата</span>
+                            <input name="date" type="date" />
+                        </label>
+                        <label class="field field--wide">
+                            <span>Что беспокоит в машине (необязательно)</span>
+                            <textarea
+                                name="comment"
+                                rows="3"
+                                placeholder="Например, стук спереди на кочках"
+                            ></textarea>
+                        </label>
+                        <button class="btn btn--dark" type="submit">
+                            Записаться
+                        </button>
+                        <p
+                            class="form__status"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="foot">
+            <div class="wrap foot__in">
+                <span>© Мотор-Лаб</span>
+                <a href="tel:+380000000000">+ 000-00-00</a>
+            </div>
+        </footer>
+
+        <div class="dock" aria-label="Быстрые действия">
+            <a class="btn btn--ghost" href="tel:+380000000000">Позвонить</a>
+            <a class="btn" href="#booking">Записаться</a>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

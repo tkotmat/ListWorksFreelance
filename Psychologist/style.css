@@ -1,0 +1,449 @@
+:root {
+    --ink: #12222b;
+    --teal: #1e5b5a;
+    --sage: #7fb5aa;
+    --mist: #eaf0f1;
+    --fog: #d3e0e2;
+    --amber: #e8b04a;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --r: 14px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+}
+body {
+    font: 17px/1.6 var(--sans);
+    color: var(--ink);
+    background: var(--mist);
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    color: inherit;
+}
+:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+.wrap {
+    width: min(1080px, 100% - 40px);
+    margin-inline: auto;
+}
+.sr {
+    position: absolute;
+    left: -9999px;
+}
+
+h1,
+h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+h1 {
+    font-size: clamp(2rem, 7.5vw, 3.6rem);
+}
+h2 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+.sub {
+    margin: 0.8rem 0 2rem;
+    max-width: 56ch;
+    opacity: 0.8;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 0.95rem 1.6rem;
+    background: var(--amber);
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border: 0;
+    border-radius: 99px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(232, 176, 74, 0.45);
+}
+.btn-small {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+}
+.link {
+    margin-left: 1.2rem;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+}
+
+/* Шапка */
+.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 20px;
+    background: rgba(234, 240, 241, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--fog);
+}
+.brand {
+    text-decoration: none;
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.1;
+}
+.brand span {
+    display: block;
+    font: 0.72rem var(--sans);
+    opacity: 0.65;
+    margin-top: 2px;
+}
+.top nav {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+}
+.top nav a:not(.btn) {
+    display: none;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.top nav a:not(.btn):hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* 1. Hero */
+.hero {
+    padding: 3rem 0 4rem;
+    overflow: hidden;
+}
+.hero-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+}
+.lead {
+    margin: 1.2rem 0 2rem;
+    font-size: 1.15rem;
+    max-width: 50ch;
+}
+.note {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+.hero-text > * {
+    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.hero-text > :nth-child(2) {
+    animation-delay: 0.12s;
+}
+.hero-text > :nth-child(3) {
+    animation-delay: 0.24s;
+}
+.hero-text > :nth-child(4) {
+    animation-delay: 0.36s;
+}
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+}
+
+.orb-wrap {
+    display: grid;
+    place-items: center;
+    min-height: 300px;
+}
+.orb {
+    position: relative;
+    width: min(70vw, 300px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    animation: breathe 10s ease-in-out infinite;
+}
+.orb i {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+}
+.orb i:nth-child(1) {
+    background: radial-gradient(circle at 35% 30%, var(--sage), var(--teal));
+}
+.orb i:nth-child(2) {
+    inset: -14%;
+    border: 1px solid var(--sage);
+    opacity: 0.6;
+}
+.orb i:nth-child(3) {
+    inset: -30%;
+    border: 1px solid var(--sage);
+    opacity: 0.3;
+}
+.orb b {
+    position: relative;
+    color: #fff;
+    font: 600 1.3rem var(--serif);
+    transition: opacity 0.5s;
+}
+@keyframes breathe {
+    0%,
+    100% {
+        transform: scale(0.78);
+    }
+    40% {
+        transform: scale(1.05);
+    }
+}
+
+/* Общие секции */
+.sec {
+    padding: 4.5rem 0;
+}
+.topics {
+    display: grid;
+    gap: 0;
+}
+.topics div {
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--fog);
+}
+.topics dt {
+    font: 600 1.2rem var(--serif);
+    margin-bottom: 0.25rem;
+}
+.topics dd {
+    opacity: 0.8;
+    max-width: 52ch;
+}
+.honest {
+    margin-top: 2rem;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--teal);
+    background: var(--fog);
+    border-radius: 0 var(--r) var(--r) 0;
+    max-width: 62ch;
+    font-size: 0.95rem;
+}
+
+/* 3. Формат */
+.dark {
+    background: var(--ink);
+    color: var(--mist);
+}
+.format-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+.facts {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.1rem;
+}
+.facts li {
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--amber);
+}
+.facts strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+}
+.price {
+    width: 100%;
+    border-collapse: collapse;
+}
+.price th,
+.price td {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(234, 240, 241, 0.2);
+    text-align: left;
+    vertical-align: top;
+}
+.price th {
+    font: 600 1.15rem var(--serif);
+}
+.price small {
+    display: block;
+    font: 0.85rem var(--sans);
+    opacity: 0.65;
+    margin-top: 0.2rem;
+}
+.price td {
+    text-align: right;
+    font: 600 1.5rem var(--serif);
+    white-space: nowrap;
+    padding-left: 1rem;
+}
+.price .best td {
+    color: var(--amber);
+}
+
+/* 4. Обо мне */
+.about {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+}
+.portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.edu {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+    max-width: 62ch;
+}
+.edu li {
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--fog);
+}
+
+/* 5. Запись */
+.book {
+    background: var(--fog);
+}
+.book-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+.faq {
+    display: grid;
+    gap: 0.5rem;
+}
+details {
+    background: var(--mist);
+    border-radius: var(--r);
+    padding: 1rem 1.2rem;
+}
+summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+details p {
+    margin-top: 0.6rem;
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+form {
+    display: grid;
+    gap: 1.1rem;
+    padding: 1.6rem;
+    background: var(--mist);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(18, 34, 43, 0.1);
+}
+label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+input,
+select,
+textarea {
+    font: inherit;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--fog);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+    transition: border-color 0.2s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(30, 91, 90, 0.2);
+}
+input.err {
+    border-color: #b3392f;
+}
+.status {
+    min-height: 1.4em;
+    font-size: 0.95rem;
+    color: var(--teal);
+    font-weight: 600;
+}
+.status.bad {
+    color: #b3392f;
+}
+
+footer {
+    padding: 2rem 0;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Планшет и десктоп */
+@media (min-width: 760px) {
+    .top {
+        padding-inline: max(20px, calc((100% - 1080px) / 2));
+    }
+    .top nav a:not(.btn) {
+        display: inline;
+    }
+    .hero {
+        padding: 5rem 0 6rem;
+    }
+    .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+    .topics {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+    .format-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    .about {
+        grid-template-columns: 200px 1fr;
+        gap: 3rem;
+    }
+    .portrait {
+        width: 200px;
+        font-size: 3.5rem;
+    }
+    .book-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

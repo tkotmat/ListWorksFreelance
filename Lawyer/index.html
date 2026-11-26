@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Семейный юрист — бесплатная консультация за 20 минут</title>
+        <meta
+            name="description"
+            content="Развод, алименты, раздел имущества, наследство. Понятный план действий и фиксированная цена. Первая консультация бесплатно."
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="top" id="top">
+            <a class="logo" href="#hero"
+                >Александр Кравец<small>семейный и гражданский юрист</small></a
+            >
+            <nav aria-label="Основное меню">
+                <a href="#cases">Дела</a><a href="#steps">Этапы</a
+                ><a href="#price">Стоимость</a>
+            </nav>
+            <a class="tel" href="tel:+380000000000">+38 (067) 123-45-67</a>
+        </header>
+
+        <main>
+            <!-- 1. ОФФЕР -->
+            <section class="hero" id="hero">
+                <div class="wrap hero-grid">
+                    <div class="hero-text">
+                        <h1>
+                            <span>Сложный разговор</span>
+                            <span>с юристом —</span> <span>это первый шаг</span>
+                            <span>к спокойствию.</span>
+                        </h1>
+                        <p class="lead">
+                            Веду семейные и гражданские дела от первой
+                            консультации до решения суда. Объясняю простыми
+                            словами, называю цену заранее и не обещаю того, чего
+                            нельзя гарантировать.
+                        </p>
+                        <ul class="facts">
+                            <li><b>12 лет</b> практики</li>
+                            <li><b>800+</b> завершённых дел</li>
+                            <li><b>Фикс</b> цена в договоре</li>
+                        </ul>
+                    </div>
+
+                    <form class="card form" data-form novalidate>
+                        <h2>Бесплатная консультация</h2>
+                        <p>
+                            20 минут по телефону или в мессенджере. Скажу, что
+                            делать и сколько это стоит.
+                        </p>
+                        <label
+                            >Ваше имя<input
+                                name="name"
+                                autocomplete="name"
+                                required
+                        /></label>
+                        <label
+                            >Телефон<input
+                                name="phone"
+                                type="tel"
+                                autocomplete="tel"
+                                placeholder="+38 0__ ___ __ __"
+                                required
+                        /></label>
+                        <label
+                            >Что случилось
+                            <select name="case">
+                                <option>Развод</option>
+                                <option>Алименты</option>
+                                <option>Раздел имущества</option>
+                                <option>Наследство</option>
+                                <option>Порядок общения с ребёнком</option>
+                                <option>Другое</option>
+                            </select>
+                        </label>
+                        <button class="btn" type="submit">
+                            Получить консультацию
+                        </button>
+                        <p class="note">
+                            Перезвоню в течение часа в рабочее время. Данные
+                            конфиденциальны.
+                        </p>
+                        <p class="ok" role="status" hidden>
+                            Заявка отправлена. Перезвоню в ближайший час.
+                        </p>
+                    </form>
+                </div>
+            </section>
+
+            <!-- 2. ВИДЫ ДЕЛ -->
+            <section class="sec" id="cases">
+                <div class="wrap">
+                    <h2 class="h2">С какими делами я работаю</h2>
+                    <ul class="cases">
+                        <li class="big">
+                            <h3>Развод</h3>
+                            <p>
+                                Через суд или ЗАГС, с детьми и без. Составлю
+                                документы, определю место жительства ребёнка и
+                                порядок выплат.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Алименты</h3>
+                            <p>
+                                Взыскание, изменение размера, снижение или
+                                отмена.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Раздел имущества</h3>
+                            <p>
+                                Квартира, авто, бизнес, долги. Договор или иск.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Наследство</h3>
+                            <p>
+                                Принятие, оспаривание завещания, споры между
+                                наследниками.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Дети</h3>
+                            <p>Порядок общения, место жительства, опека.</p>
+                        </li>
+                        <li>
+                            <h3>Брачный договор</h3>
+                            <p>
+                                Защитите имущество до того, как возникнет спор.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. ЭТАПЫ -->
+            <section class="sec tint" id="steps">
+                <div class="wrap">
+                    <h2 class="h2">Как мы будем работать</h2>
+                    <ol class="steps">
+                        <li>
+                            <h3>Консультация</h3>
+                            <p>
+                                Слушаю вашу ситуацию и оцениваю перспективы.
+                                Бесплатно, 20 минут.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>План и договор</h3>
+                            <p>
+                                Описываю шаги, сроки и итоговую цену. Всё
+                                фиксируется в договоре.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Работа с делом</h3>
+                            <p>
+                                Собираю документы, веду переговоры, подаю иски,
+                                представляю вас в суде.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Результат</h3>
+                            <p>
+                                Передаю решение суда или подписанное соглашение
+                                и объясняю, что делать дальше.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 4. СТОИМОСТЬ -->
+            <section class="sec" id="price">
+                <div class="wrap">
+                    <h2 class="h2">Сколько это стоит</h2>
+                    <p class="sub">
+                        Цену называю после консультации и фиксирую в договоре.
+                        Ориентиры:
+                    </p>
+                    <div class="plans">
+                        <article class="plan">
+                            <h3>Консультация</h3>
+                            <p class="cost">0 ₴</p>
+                            <ul>
+                                <li>Первые 20 минут</li>
+                                <li>Оценка перспектив</li>
+                                <li>Список документов</li>
+                            </ul>
+                            <a class="btn ghost" href="#contact">Записаться</a>
+                        </article>
+                        <article class="plan pick">
+                            <h3>Ведение дела</h3>
+                            <p class="cost">от 8 000 ₴</p>
+                            <ul>
+                                <li>Подготовка документов и иска</li>
+                                <li>Представительство в суде</li>
+                                <li>Отчёт по каждому этапу</li>
+                            </ul>
+                            <a class="btn" href="#contact">Обсудить дело</a>
+                        </article>
+                        <article class="plan">
+                            <h3>Документы</h3>
+                            <p class="cost">от 1 500 ₴</p>
+                            <ul>
+                                <li>Иск, заявление, договор</li>
+                                <li>Проверка ваших бумаг</li>
+                                <li>Инструкция по подаче</li>
+                            </ul>
+                            <a class="btn ghost" href="#contact">Заказать</a>
+                        </article>
+                    </div>
+                    <p class="note">
+                        Суммы-примеры, замените на свои. Судебный сбор
+                        оплачивается отдельно.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 5. ЗАЯВКА -->
+            <section class="sec dark" id="contact">
+                <div class="wrap contact-grid">
+                    <div>
+                        <h2 class="h2">
+                            Расскажите, что произошло. Остальное я возьму на
+                            себя.
+                        </h2>
+                        <p class="lead">
+                            Первый разговор ни к чему вас не обязывает. Вы
+                            узнаете свои права, варианты решения и стоимость.
+                        </p>
+                        <p class="links">
+                            <a href="tel:+380000000000">+38 (067) 123-45-67</a
+                            ><a href="mailto:mail@example.com"
+                                >just.mail@gmail.com</a
+                            ><span>Пн–Пт 9:00–19:00, Telegram и Viber</span>
+                        </p>
+                    </div>
+                    <form class="card form" data-form novalidate>
+                        <label
+                            >Ваше имя<input
+                                name="name"
+                                autocomplete="name"
+                                required
+                        /></label>
+                        <label
+                            >Телефон<input
+                                name="phone"
+                                type="tel"
+                                autocomplete="tel"
+                                required
+                        /></label>
+                        <label
+                            >Коротко о ситуации<textarea
+                                name="msg"
+                                rows="3"
+                            ></textarea>
+                        </label>
+                        <button class="btn" type="submit">
+                            Записаться на консультацию
+                        </button>
+                        <p class="ok" role="status" hidden>
+                            Заявка отправлена. Перезвоню в ближайший час.
+                        </p>
+                    </form>
+                </div>
+                <p class="foot">
+                    © 2026 Александр Кравец, адвокат. Информация на сайте не
+                    заменяет индивидуальную консультацию.
+                </p>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

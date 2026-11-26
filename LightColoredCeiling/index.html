@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Натяжные потолки под ключ — монтаж за 1 день, от 390 ₴/м²</title>
+<meta name="description" content="Натяжные потолки: матовые, глянцевые, тканевые, парящие. Бесплатный замер, цена за м² фиксируется в договоре, монтаж за 1 день, гарантия 10 лет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#hero">Светлый потолок</a>
+  <a class="btn btn--sm" href="#calc">Рассчитать цену</a>
+</header>
+
+<main>
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="ceiling" aria-hidden="true">
+    <span class="spot" style="--x:18%;--d:.4s"></span>
+    <span class="spot" style="--x:50%;--d:.8s"></span>
+    <span class="spot" style="--x:82%;--d:1.2s"></span>
+    <span class="sheen"></span>
+  </div>
+  <div class="wrap hero__body">
+    <h1>Потолок, который меняет всю комнату. За один день.</h1>
+    <p class="lead">Натяжные потолки от 390 ₴/м² с монтажом. Бесплатный замер, цена фиксируется в договоре, гарантия 10 лет.</p>
+    <div class="hero__cta">
+      <a class="btn" href="#calc">Рассчитать стоимость за 30 секунд</a>
+      <a class="btn btn--ghost" href="#types">Смотреть виды потолков</a>
+    </div>
+    <ul class="facts">
+      <li><b>1 день</b> монтаж комнаты</li>
+      <li><b>10 лет</b> гарантия</li>
+      <li><b>0 ₴</b> замер и выезд</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. ВИДЫ -->
+<section class="sec" id="types">
+  <div class="wrap">
+    <h2>Выберите фактуру — цена за м² уже с монтажом</h2>
+    <p class="sub">Полотно, профиль и работа входят в цену. Светильники и люстры считаем отдельно.</p>
+    <div class="types">
+      <article class="type"><div class="sw sw--matte"></div><h3>Матовый</h3><p>Ровная поверхность, как свежая покраска. Подходит для любой комнаты.</p><p class="price">от 390 ₴/м²</p></article>
+      <article class="type"><div class="sw sw--satin"></div><h3>Сатиновый</h3><p>Мягкий шелковистый блеск. Выглядит дороже, чем стоит.</p><p class="price">от 450 ₴/м²</p></article>
+      <article class="type"><div class="sw sw--gloss"></div><h3>Глянцевый</h3><p>Отражает свет и визуально увеличивает комнату.</p><p class="price">от 490 ₴/м²</p></article>
+      <article class="type"><div class="sw sw--fabric"></div><h3>Тканевый</h3><p>Без запаха, шире швов нет: полотно до 5 м без стыков. Выдерживает мороз.</p><p class="price">от 690 ₴/м²</p></article>
+      <article class="type type--wide"><div class="sw sw--float"></div><h3>Парящий</h3><p>Светящийся контур по периметру: потолок будто висит в воздухе. Ваш главный акцент в гостиной и спальне.</p><p class="price">+90 ₴/м² к любому виду</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. КАЛЬКУЛЯТОР -->
+<section class="sec sec--dark" id="calc">
+  <div class="wrap calc">
+    <div>
+      <h2>Узнайте цену, не вставая с дивана</h2>
+      <p class="sub">Укажите площадь и выберите фактуру. Итог совпадёт с договором.</p>
+    </div>
+    <form class="calc__form" id="calcForm" onsubmit="return false">
+      <label class="field">Площадь, м²
+        <input type="range" id="area" min="5" max="100" value="20">
+        <output id="areaOut">20 м²</output>
+      </label>
+      <fieldset class="opts">
+        <legend>Вид потолка</legend>
+        <label><input type="radio" name="type" value="390" checked><span>Матовый</span></label>
+        <label><input type="radio" name="type" value="450"><span>Сатиновый</span></label>
+        <label><input type="radio" name="type" value="490"><span>Глянцевый</span></label>
+        <label><input type="radio" name="type" value="690"><span>Тканевый</span></label>
+      </fieldset>
+      <label class="check"><input type="checkbox" id="float"><span>Парящий профиль (+90 ₴/м²)</span></label>
+      <label class="field">Точечные светильники, шт (220 ₴/шт)
+        <input type="number" id="spots" min="0" max="40" value="0" inputmode="numeric">
+      </label>
+      <div class="total" aria-live="polite">
+        <span class="total__old" id="old"></span>
+        <span class="total__sum" id="sum">7 800 ₴</span>
+        <span class="total__note" id="note">Скидка 10% по онлайн-заявке уже учтена</span>
+      </div>
+      <a class="btn btn--glow" href="#contact">Зафиксировать эту цену</a>
+    </form>
+  </div>
+</section>
+
+<!-- 4. СРОКИ И АКЦИИ -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <h2>От звонка до готового потолка — 2 дня</h2>
+    <ol class="steps">
+      <li><h3>Замер в день обращения</h3><p>Мастер приедет бесплатно, посчитает точно и покажет образцы.</p></li>
+      <li><h3>Договор с фиксированной ценой</h3><p>Сумма в договоре не вырастет после монтажа.</p></li>
+      <li><h3>Монтаж за 3–6 часов</h3><p>Комната до 20 м² за один визит. Без пыли и строительного мусора.</p></li>
+      <li><h3>Гарантия 10 лет</h3><p>На полотно и на монтаж. Письменно, в договоре.</p></li>
+    </ol>
+    <h2 class="h2-promo">Акции этого месяца</h2>
+    <div class="promos">
+      <div class="promo"><b>−10%</b><p>на любой потолок при заявке с сайта</p></div>
+      <div class="promo"><b>3 светильника</b><p>в подарок при заказе от 30 м²</p></div>
+      <div class="promo"><b>0%</b><p>рассрочка на 6 месяцев без переплаты</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ЗАЯВКА -->
+<section class="sec sec--glow" id="contact">
+  <div class="wrap contact">
+    <h2>Закажите бесплатный замер</h2>
+    <p class="sub">Оставьте номер — перезвоним в течение 15 минут в рабочее время и согласуем удобное время визита.</p>
+    <form class="lead-form" id="leadForm" novalidate>
+      <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
+      <input type="tel" name="phone" placeholder="+380 __ ___ __ __" autocomplete="tel" required>
+      <button class="btn btn--glow" type="submit">Вызвать мастера бесплатно</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+    <p class="fine">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">© Светлый потолок · Одесса и область · Ежедневно 9:00–20:00</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
